@@ -72,6 +72,9 @@
       - apiGroups: ["image.openshift.io", ""]
         resources: ["images"]
         verbs: ["get", "list"]
+      - apiGroup: ["network.openshift.io"]
+        resource: ["clusternetworks"]
+        verbs: ["get", "list", "update"]
 
 - name: Create asb-access cluster role
   oc_clusterrole:
